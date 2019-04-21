@@ -1,12 +1,15 @@
 #!/bin/sh
 
 # Run within chroot at end of Arch setup
-# Create and su into jsalcido
-# Install yay
-# Install default packages
-# Clone dotfiles repo and initialize manager
-# Enable services
+# REQUIRES: base base-devel zsh
 
-./install_yay.sh
+echo "### STARTING SYSTEM INITIALIZATION ###"
 
-./install_dotfiles.sh
+git clone https://github.com/jsalix/arch-init.git
+cd arch-init
+chmod +x install_setup.sh
+./install_setup.sh
+cd ..
+rm -rf arch-init
+
+echo "### SYSTEM INITIALIZATION COMPLETE ###"

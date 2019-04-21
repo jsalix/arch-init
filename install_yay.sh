@@ -6,4 +6,4 @@ makepkg -si --needed --noconfirm
 cd ..
 rm -rf yay
 
-echo "Installed yay"
+echo "### Installed yay"

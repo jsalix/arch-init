@@ -10,4 +10,4 @@ config() {
 config checkout
 config config --local status.showUntrackedFiles no
 
-echo "Installed dotfiles"
+echo "### Installed dotfiles"
