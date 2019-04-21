@@ -5,11 +5,11 @@
 
 echo "### STARTING SYSTEM INITIALIZATION ###"
 
-git clone https://github.com/jsalix/arch-init.git
-cd arch-init
-chmod a+x *.sh
+git clone https://github.com/jsalix/arch-init.git /tmp/arch-init
+cd /tmp/arch-init
+chmod a+rx *.sh
 ./install_setup.sh
-cd ..
-rm -rf arch-init
+cd
+rm -rf /tmp/arch-init
 
 echo "### SYSTEM INITIALIZATION COMPLETE ###"
