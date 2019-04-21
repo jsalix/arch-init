@@ -7,7 +7,7 @@ echo "### STARTING SYSTEM INITIALIZATION ###"
 
 git clone https://github.com/jsalix/arch-init.git
 cd arch-init
-chmod +x *.sh
+chmod a+x *.sh
 ./install_setup.sh
 cd ..
 rm -rf arch-init
