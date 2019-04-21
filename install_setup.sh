@@ -6,10 +6,12 @@
 # Clone dotfiles repo and initialize manager
 # Enable services
 
-useradd -m -G wheel -s /bin/zsh jsalcido
+read -p "Username:" username
+useradd -m -G wheel -s /bin/zsh "$username"
 
-su jsalcido -c './install_yay.sh'
-su jsalcido -c './install_packages.sh'
-su jsalcido -c './install_dotfiles.sh'
+su "$username" -c ./install_yay.sh
+su "$username" -c ./install_packages.sh
+su "$username" -c ./install_dotfiles.sh
 
-passwd jsalcido
+read -s -p "Password:" password
+echo "$password" | passwd "$username" --stdin
