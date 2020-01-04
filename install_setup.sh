@@ -6,7 +6,7 @@
 # Clone dotfiles repo and initialize manager
 # Enable services
 
-currentdir=$(pwd)
+currentdir="/tmp/arch-init"
 
 #read -p "Username:" username
 username="jsalcido"
